@@ -1,0 +1,197 @@
+:root {
+	--uabb-ink: #26271f;
+	--uabb-muted: #74766d;
+	--uabb-paper: #fbf9f4;
+	--uabb-sand: #f0ebe1;
+	--uabb-olive: #575b43;
+	--uabb-olive-dark: #454936;
+	--uabb-clay: #a66343;
+	--uabb-line: #ded8cc;
+	--uabb-font: "Raleway", "Noto Sans Arabic", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--uabb-ink); background: var(--uabb-paper); font-family: var(--uabb-font); font-size: 14px; line-height: 1.65; }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--uabb-clay); }
+button, input, select, textarea { font: inherit; }
+button, select { cursor: pointer; }
+.screen-reader-text { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+.uabb-announcement { min-height: 29px; padding: 5px 20px; color: #fffdf7; background: var(--uabb-olive-dark); text-align: center; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; }
+.uabb-header { background: var(--uabb-paper); border-bottom: 1px solid var(--uabb-line); }
+.uabb-header-main { width: min(1400px, calc(100% - 80px)); min-height: 80px; margin-inline: auto; display: grid; grid-template-columns: 235px minmax(180px, 360px) 1fr; align-items: center; gap: 30px; }
+.uabb-brand { justify-self: start; display: inline-flex; align-items: center; min-width: 0; }
+.uabb-brand-lockup { display: inline-flex; flex-direction: column; align-items: flex-start; line-height: 1; white-space: nowrap; }
+.uabb-brand-primary { font-size: 31px; font-weight: 400; letter-spacing: .19em; }
+.uabb-brand-secondary { margin-top: 7px; font-size: 9px; font-weight: 500; letter-spacing: .32em; text-transform: uppercase; }
+.uabb-search { min-width: 0; height: 34px; display: flex; border-bottom: 1px solid #aaa99f; }
+.uabb-search input[type="search"] { min-width: 0; flex: 1; padding: 0 2px; border: 0; outline: 0; color: var(--uabb-ink); background: transparent; font-size: 11px; }
+.uabb-search button { padding: 0 3px 0 12px; border: 0; background: transparent; color: var(--uabb-olive-dark); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+.uabb-header-actions { justify-self: end; display: flex; align-items: center; gap: 17px; white-space: nowrap; font-size: 10px; }
+.uabb-header-actions > a:not(.uabb-cart) { letter-spacing: .04em; }
+.uabs-language-switcher { font-size: 10px; }
+.uabs-language-switcher a { text-decoration: none; color: var(--uabb-muted); }
+.uabs-language-switcher a[aria-current="page"] { color: var(--uabb-ink); font-weight: 700; }
+.uabb-cart { display: inline-flex; align-items: center; gap: 7px; font-size: 10px; }
+.uabb-cart b { width: 22px; height: 22px; display: inline-grid; place-items: center; border: 1px solid var(--uabb-line); border-radius: 50%; font-size: 9px; font-weight: 500; }
+.uabb-nav { min-height: 43px; display: flex; justify-content: center; align-items: center; gap: clamp(18px, 3vw, 42px); border-top: 1px solid #f0ece5; font-size: 9px; letter-spacing: .14em; text-transform: uppercase; white-space: nowrap; }
+.uabb-nav a { padding: 6px 0; }
+.uabb-main { min-height: 55vh; }
+
+.uabb-hero { min-height: 430px; display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(310px, .95fr); background: var(--uabb-sand); }
+.uabb-hero-media { min-height: 430px; overflow: hidden; }
+.uabb-hero-media img { width: 100%; height: 100%; min-height: 430px; display: block; object-fit: cover; object-position: center; }
+.uabb-hero-copy { max-width: 600px; padding: 56px clamp(28px, 5vw, 76px); align-self: center; }
+.uabb-eyebrow { margin: 0 0 15px; color: var(--uabb-olive); font-size: 9px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.uabb-hero h1 { max-width: 470px; margin: 0; font-size: clamp(40px, 4.6vw, 62px); font-weight: 300; line-height: 1.08; letter-spacing: -.045em; }
+.uabb-hero-description { max-width: 360px; margin: 20px 0 25px; color: #5f6058; font-size: 13px; line-height: 1.8; }
+.uabb-button, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce a.button.alt, .woocommerce button.button.alt { min-height: 44px; padding: 0 20px; display: inline-flex; align-items: center; justify-content: center; gap: 13px; border: 0; border-radius: 0; background: var(--uabb-olive-dark); color: #fffdf7; font-family: var(--uabb-font); font-size: 9px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; transition: background .2s ease; }
+.uabb-button:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover { color: #fffdf7; background: var(--uabb-clay); }
+.uabb-button span, .uabb-text-link span { font-size: 15px; }
+.uabb-hero-note { margin: 32px 0 0; color: var(--uabb-muted); font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+
+.uabb-category-section, .uabb-featured-section { width: min(1400px, calc(100% - 80px)); margin: 64px auto 78px; }
+.uabb-section-heading { margin-bottom: 23px; display: flex; justify-content: space-between; align-items: end; gap: 20px; }
+.uabb-section-heading .uabb-eyebrow { margin-bottom: 4px; }
+.uabb-section-heading h2 { margin: 0; font-size: clamp(25px, 2.7vw, 34px); font-weight: 300; line-height: 1.2; letter-spacing: -.025em; }
+.uabb-text-link { padding-bottom: 4px; display: inline-flex; align-items: center; gap: 10px; border-bottom: 1px solid #aaa99f; font-size: 9px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.uabb-category-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.uabb-category-card { min-width: 0; aspect-ratio: 1.48; position: relative; display: block; overflow: hidden; background: var(--uabb-sand); }
+.uabb-category-card img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .45s ease; }
+.uabb-category-card:hover img { transform: scale(1.035); }
+.uabb-category-index { position: absolute; top: 13px; inset-inline-start: 14px; padding: 3px 6px; color: #fff; background: rgba(38,39,31,.54); font-size: 8px; letter-spacing: .1em; }
+.uabb-category-label { position: absolute; right: 0; bottom: 0; left: 0; min-height: 42px; padding: 11px 14px; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #fff; background: rgba(38,39,31,.64); font-size: 9px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.uabb-category-card:hover .uabb-category-label { background: var(--uabb-olive-dark); color: #fff; }
+.uabb-category-label > span { font-size: 14px; }
+
+.uabb-featured-section { margin-top: 0; }
+.uabb-featured-section ul.products { margin: 0 !important; display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px !important; }
+.uabb-featured-section ul.products li.product { width: auto !important; margin: 0 !important; float: none !important; }
+.woocommerce ul.products li.product a img { margin: 0 0 12px !important; aspect-ratio: 4/4.8; object-fit: cover; background: var(--uabb-sand); }
+.woocommerce ul.products li.product .woocommerce-loop-product__title { padding: 0 !important; color: var(--uabb-ink); font-family: var(--uabb-font); font-size: 13px !important; font-weight: 500; line-height: 1.45; letter-spacing: .025em; }
+.woocommerce ul.products li.product .price { margin-top: 6px !important; color: var(--uabb-olive-dark) !important; font-size: 11px !important; }
+.woocommerce ul.products li.product .button { margin-top: 8px; min-height: 36px; padding-inline: 12px; font-size: 8px; }
+.woocommerce span.onsale { min-width: auto !important; min-height: 0 !important; padding: 5px 8px !important; border-radius: 0 !important; background: var(--uabb-clay) !important; font-size: 8px !important; line-height: 1 !important; }
+.uabb-empty-collection { min-height: 128px; padding: 24px clamp(18px, 4vw, 48px); display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 25px; background: var(--uabb-sand); }
+.uabb-empty-index { margin: 0; color: var(--uabb-clay); font-size: 10px; letter-spacing: .12em; }
+.uabb-empty-collection h3 { margin: 0; font-size: 19px; font-weight: 400; }
+.uabb-empty-collection p:not(.uabb-empty-index) { margin: 4px 0 0; color: var(--uabb-muted); font-size: 11px; }
+.uabb-service-strip { width: min(1400px, calc(100% - 80px)); margin: 0 auto 72px; padding: 20px 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--uabb-line); border-bottom: 1px solid var(--uabb-line); }
+.uabb-service-strip div { padding: 5px 22px; display: flex; align-items: center; gap: 14px; border-inline-end: 1px solid var(--uabb-line); }
+.uabb-service-strip div:first-child { padding-inline-start: 0; }
+.uabb-service-strip div:last-child { border: 0; }
+.uabb-service-strip span { color: var(--uabb-clay); font-size: 11px; letter-spacing: .1em; }
+.uabb-service-strip p { margin: 0; font-size: 10px; letter-spacing: .035em; }
+
+.uabb-content-wrap { width: min(1320px, calc(100% - 64px)); min-height: 400px; margin: 45px auto 80px; }
+.uabb-content-wrap > h1, .uabb-article h1, .woocommerce-products-header__title { margin: 0 0 24px; font-size: clamp(32px, 3.2vw, 46px); font-weight: 300; letter-spacing: -.035em; }
+.uabb-article { max-width: 850px; margin-inline: auto; }
+.uabb-catalog-filters { margin: 0 0 22px; padding: 14px 16px; display: grid; grid-template-columns: repeat(4, minmax(130px, 1fr)) auto; align-items: end; gap: 10px; border: 1px solid var(--uabb-line); background: #f7f4ed; }
+.uabb-filter-field { min-width: 0; display: grid; gap: 5px; }
+.uabb-filter-field label { color: var(--uabb-muted); font-size: 8px; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.uabb-filter-field select { width: 100%; min-height: 37px; padding: 0 10px; border: 1px solid var(--uabb-line); border-radius: 0; color: var(--uabb-ink); background: var(--uabb-paper); font-size: 10px; }
+.uabb-filter-actions { display: flex; align-items: center; gap: 12px; }
+.uabb-filter-submit { min-height: 37px; padding: 0 15px; border: 0; background: var(--uabb-olive-dark); color: white; font-family: var(--uabb-font); font-size: 8px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.uabb-filter-submit:hover { background: var(--uabb-clay); }
+.uabb-filter-clear { color: var(--uabb-muted); font-size: 9px; white-space: nowrap; text-decoration: underline; text-underline-offset: 3px; }
+.uabb-content-wrap .woocommerce-result-count, .uabb-content-wrap .woocommerce-ordering { margin: 0 0 15px; color: var(--uabb-muted); font-size: 10px; }
+.uabb-content-wrap .woocommerce-ordering select { min-height: 36px; padding-inline: 10px; border: 1px solid var(--uabb-line); border-radius: 0; background: var(--uabb-paper); font-size: 10px; }
+.uabb-content-wrap .woocommerce ul.products { clear: both; margin: 0 !important; display: grid !important; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 16px !important; }
+.uabb-content-wrap .woocommerce ul.products li.product { width: auto !important; margin: 0 !important; float: none !important; }
+.uabb-content-wrap .woocommerce nav.woocommerce-pagination { margin-top: 35px; }
+.uabb-content-wrap .woocommerce nav.woocommerce-pagination ul { border-color: var(--uabb-line); }
+.uabb-content-wrap .woocommerce nav.woocommerce-pagination ul li { border-color: var(--uabb-line); }
+.uabb-content-wrap .woocommerce nav.woocommerce-pagination ul li a, .uabb-content-wrap .woocommerce nav.woocommerce-pagination ul li span { color: var(--uabb-ink); font-size: 11px; }
+.uabb-content-wrap .woocommerce nav.woocommerce-pagination ul li span.current { background: var(--uabb-olive-dark); color: #fff; }
+
+.uabb-footer { padding: 42px 40px 22px; color: #f8f5ed; background: #33372c; }
+.uabb-footer-inner { width: min(1400px, 100%); margin-inline: auto; display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 18px 30px; }
+.uabb-footer .uabb-brand-primary { font-size: 24px; letter-spacing: .17em; }
+.uabb-footer .uabb-brand-secondary { margin-top: 6px; font-size: 8px; }
+.uabb-footer-intro p { margin: 12px 0 0; color: #d3d1c7; font-size: 10px; }
+.uabb-footer-links { display: flex; flex-wrap: wrap; justify-content: end; gap: 10px 24px; font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+.uabb-footer-links a:hover { color: #d1a58c; }
+.uabb-footer .uabb-copyright { grid-column: 1 / -1; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.16); color: #d3d1c7; font-size: 9px; }
+
+.woocommerce .quantity .qty, .woocommerce input.input-text, .woocommerce textarea, .woocommerce select { min-height: 42px; border: 1px solid var(--uabb-line); border-radius: 0; background: #fff; }
+.woocommerce table.shop_table { border-color: var(--uabb-line); border-radius: 0; }
+.woocommerce .col2-set, .woocommerce-page .col2-set { width: 57%; }
+.woocommerce #order_review_heading, .woocommerce #order_review { width: 39%; }
+.woocommerce form.checkout { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px; }
+.woocommerce form.checkout #customer_details { width: 57%; }
+.woocommerce form.checkout #order_review_heading, .woocommerce form.checkout #order_review { width: 39%; }
+.woocommerce form .form-row label { color: #45463f; font-size: 11px; }
+.woocommerce .woocommerce-info, .woocommerce .woocommerce-message { border-top-color: var(--uabb-olive); background: #f8f7f1; }
+.woocommerce .woocommerce-info::before, .woocommerce .woocommerce-message::before { color: var(--uabb-olive); }
+.uabs-whatsapp-order { margin: 25px 0; padding: 20px; background: #edf4ec; border-inline-start: 3px solid #258b59; }
+.uabs-whatsapp-order p { margin: 0 0 12px; }
+.uabs-whatsapp-button { background: #208b57 !important; }
+.uabs-whatsapp-button:hover { background: #176c43 !important; }
+.uabs-rate-row { width: min(420px,100%); padding: 5px 0; display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.uabs-rate-row input { width: 140px; }
+body.rtl { font-family: "Noto Sans Arabic", "Raleway", Arial, sans-serif; }
+body.rtl .uabb-brand-lockup { align-items: flex-start; }
+body.rtl .uabb-brand-primary { font-size: 28px; font-weight: 400; letter-spacing: 0; }
+body.rtl .uabb-brand-secondary { font-size: 11px; letter-spacing: 0; }
+body.rtl .uabb-button span, body.rtl .uabb-text-link span { transform: scaleX(-1); }
+
+@media (max-width: 1050px) {
+	.uabb-header-main { width: calc(100% - 48px); grid-template-columns: 185px minmax(150px, 280px) 1fr; gap: 18px; }
+	.uabb-brand-primary { font-size: 27px; }
+	.uabb-header-actions { gap: 11px; }
+	.uabb-nav { gap: 22px; }
+	.uabb-hero { grid-template-columns: minmax(0, 1.2fr) minmax(280px, .9fr); }
+	.uabb-category-section, .uabb-featured-section, .uabb-service-strip { width: calc(100% - 48px); }
+	.uabb-content-wrap { width: calc(100% - 48px); }
+	.uabb-catalog-filters { grid-template-columns: repeat(2, minmax(0, 1fr)) auto; }
+}
+@media (max-width: 760px) {
+	.uabb-announcement { font-size: 8px; letter-spacing: .09em; }
+	.uabb-header-main { width: calc(100% - 32px); min-height: 72px; padding: 10px 0; grid-template-columns: 1fr auto; gap: 10px 14px; }
+	.uabb-search { grid-column: 1 / -1; grid-row: 2; }
+	.uabb-brand-primary { font-size: 25px; }
+	.uabb-brand-secondary { font-size: 8px; }
+	.uabb-header-actions { gap: 9px; font-size: 9px; }
+	.uabb-header-actions > a:not(.uabb-cart) { display: none; }
+	.uabb-header-actions > a[href*="wa.me"] { display: inline-flex; font-size: 8px; }
+	.uabb-nav { min-height: 40px; justify-content: flex-start; gap: 22px; overflow-x: auto; padding: 0 16px; font-size: 8px; scrollbar-width: none; }
+	.uabb-nav::-webkit-scrollbar { display: none; }
+	.uabb-hero { grid-template-columns: 1fr; }
+	.uabb-hero-media, .uabb-hero-media img { min-height: 0; height: clamp(250px, 67vw, 390px); }
+	.uabb-hero-copy { max-width: none; padding: 28px 24px 32px; }
+	.uabb-hero h1 { max-width: 480px; font-size: clamp(38px, 9vw, 52px); }
+	.uabb-hero-description { margin: 12px 0 18px; }
+	.uabb-hero-note { margin-top: 20px; }
+	.uabb-category-section, .uabb-featured-section, .uabb-service-strip { width: calc(100% - 32px); margin-top: 42px; margin-bottom: 48px; }
+	.uabb-section-heading h2 { font-size: 26px; }
+	.uabb-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+	.uabb-category-card { aspect-ratio: 1.22; }
+	.uabb-category-label { min-height: 38px; padding: 8px 10px; font-size: 8px; letter-spacing: .08em; }
+	.uabb-featured-section ul.products, .uabb-content-wrap .woocommerce ul.products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px !important; }
+	.uabb-empty-collection { grid-template-columns: auto 1fr; gap: 10px 16px; padding: 18px; }
+	.uabb-empty-collection .uabb-text-link { grid-column: 2; justify-self: start; }
+	.uabb-service-strip { grid-template-columns: 1fr; padding: 8px 0; }
+	.uabb-service-strip div, .uabb-service-strip div:first-child { min-height: 48px; padding: 7px 0; border-inline-end: 0; border-bottom: 1px solid var(--uabb-line); }
+	.uabb-service-strip div:last-child { border: 0; }
+	.uabb-content-wrap { width: calc(100% - 32px); margin: 30px auto 55px; }
+	.uabb-content-wrap > h1, .uabb-article h1, .woocommerce-products-header__title { font-size: 34px; }
+	.uabb-catalog-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; padding: 12px; }
+	.uabb-filter-actions { grid-column: 1 / -1; justify-content: space-between; }
+	.woocommerce form.checkout #customer_details, .woocommerce .col2-set, .woocommerce-page .col2-set, .woocommerce form.checkout #order_review_heading, .woocommerce form.checkout #order_review { width: 100%; }
+	.uabb-footer { padding: 34px 22px 20px; }
+	.uabb-footer-inner { grid-template-columns: 1fr; }
+	.uabb-footer-links { justify-content: start; }
+	.uabb-footer .uabb-copyright { grid-column: 1; }
+}
+@media (max-width: 430px) {
+	.uabb-header-actions { gap: 8px; }
+	.uabs-language-switcher { font-size: 9px; }
+	.uabb-cart span { display: none; }
+	.uabb-category-label { font-size: 7px; }
+	.uabb-section-heading { align-items: start; }
+	.uabb-text-link { max-width: 112px; font-size: 8px; }
+	.uabb-catalog-filters { grid-template-columns: 1fr; }
+	.uabb-filter-actions { grid-column: 1; }
+}

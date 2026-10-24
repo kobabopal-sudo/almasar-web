@@ -1,0 +1,155 @@
+/* Almasar visual system: shared warm neutrals, one navy accent for Gadgets. */
+:root {
+	--uabb-navy: #17396c;
+	--uabb-gadget-accent: #17396c;
+	--uabb-gadget-accent-hover: #102d4f;
+	--uabb-display: "Bodoni Moda", "Times New Roman", serif;
+}
+
+body:dir(rtl) {
+	--uabb-font: "Noto Sans Arabic", Arial, sans-serif;
+	--uabb-display: "Amiri", "Noto Sans Arabic", serif;
+}
+
+body:not(:dir(rtl)) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong) {
+	font-family: var(--uabb-display);
+	font-weight: 500;
+}
+
+body:dir(rtl) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong) {
+	font-family: var(--uabb-display);
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+body:dir(rtl) .uabb-collection-switch strong { font-family: var(--uabb-display); font-weight: 700; }
+
+/* Keep the same paper, sand, ink, and footer in both storefronts. */
+body.uabb-department-objects {
+	--uabb-gadget-accent: #17396c;
+	--uabb-gadget-accent-hover: #102d4f;
+	--uabb-olive: var(--uabb-gadget-accent);
+	--uabb-olive-dark: var(--uabb-gadget-accent-hover);
+	background: var(--uabb-paper);
+	color: var(--uabb-ink);
+}
+
+body.uabb-department-objects .uabb-announcement { color: #fffdf7; background: var(--uabb-olive-dark); }
+body.uabb-department-objects .uabb-header,
+body.uabb-department-objects .uabb-header-main,
+body.uabb-department-objects .uabb-nav { color: var(--uabb-ink); background: var(--uabb-paper); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-search { border-color: #aaa99f; }
+body.uabb-department-objects .uabb-search:focus-within { border-color: var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-search input[type="search"],
+body.uabb-department-objects .uabb-search button,
+body.uabb-department-objects .uabb-cart { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-cart b { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabs-language-switcher a[aria-current="page"] { color: var(--uabb-gadget-accent); }
+body.uabb-department-objects a:hover,
+body.uabb-department-objects .uabb-nav-mega > summary:hover,
+body.uabb-department-objects .uabb-header-actions a:hover,
+body.uabb-department-objects .uabb-mega-side > a:hover { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-mega-panel { color: var(--uabb-ink); background: rgba(249,247,242,.98); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-mega-side > a { border-color: rgba(38,39,31,.1); }
+body.uabb-department-objects .uabb-mega-tiles > .uabb-mega-note-blue { color: #233a4b; background: linear-gradient(145deg,#e2e9ec,#cbd8df); }
+
+body.uabb-department-objects .uabb-collection-switch {
+	color: var(--uabb-ink);
+	border-color: var(--uabb-line);
+	border-radius: 10px;
+	background: color-mix(in srgb,var(--uabb-paper) 92%,transparent);
+}
+body.uabb-department-objects .uabb-collection-switch > a + .uabb-collection-switch-mark + a,
+body.uabb-department-objects .uabb-collection-switch-mark { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-collection-switch > a { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-collection-switch > a small,
+body.uabb-department-objects .uabb-collection-switch > a > span { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-collection-switch > a:hover,
+body.uabb-department-objects .uabb-collection-switch > a.is-active {
+	color: var(--uabb-ink);
+	background: rgba(23,57,108,.065);
+	border-color: rgba(23,57,108,.28);
+}
+body.uabb-department-objects .uabb-collection-switch > a.is-active > span,
+body.uabb-department-objects .uabb-collection-switch > a.is-active small { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-archive-hero,
+body.uabb-department-objects .uabb-archive-hero-objects { color: var(--uabb-ink); background: var(--uabb-sand); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-archive-hero-copy h1,
+body.uabb-department-objects .uabb-archive-hero-copy > p:last-child { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-archive-hero .uabb-eyebrow { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-catalog-filters {
+	color: var(--uabb-ink);
+	border-color: rgba(23,57,108,.16);
+	border-radius: 12px;
+	background: linear-gradient(145deg,rgba(255,255,255,.92),rgba(247,244,237,.96));
+	box-shadow: var(--uabb-shadow-panel);
+}
+body.uabb-department-objects .uabb-filter-field label,
+body.uabb-department-objects .woocommerce-result-count { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-filter-field select,
+body.uabb-department-objects .uabb-filter-field input,
+body.uabb-department-objects .woocommerce-ordering select {
+	color: var(--uabb-ink);
+	border-color: rgba(38,39,31,.2);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.84);
+}
+body.uabb-department-objects .uabb-filter-field select:focus-visible,
+body.uabb-department-objects .uabb-filter-field input:focus-visible,
+body.uabb-department-objects .woocommerce-ordering select:focus-visible { outline: 2px solid var(--uabb-gadget-accent); outline-offset: 2px; }
+body.uabb-department-objects .uabb-filter-field option { color: var(--uabb-ink); background: var(--uabb-paper); }
+body.uabb-department-objects .uabb-filter-submit,
+body.uabb-department-objects .woocommerce a.button.alt,
+body.uabb-department-objects .woocommerce button.button.alt {
+	color: #fff;
+	background: var(--uabb-gadget-accent);
+	border-color: var(--uabb-gadget-accent);
+	border-radius: 5px;
+}
+body.uabb-department-objects .uabb-filter-submit:hover,
+body.uabb-department-objects .woocommerce a.button.alt:hover,
+body.uabb-department-objects .woocommerce button.button.alt:hover { color: #fff; background: var(--uabb-gadget-accent-hover); border-color: var(--uabb-gadget-accent-hover); }
+body.uabb-department-objects .uabb-filter-clear { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-archive-categories { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-archive-categories a,
+body.uabb-department-objects .uabb-category-ideas a { color: var(--uabb-ink); border-color: var(--uabb-line); background: rgba(255,255,255,.55); }
+body.uabb-department-objects .uabb-archive-categories a:hover,
+body.uabb-department-objects .uabb-category-ideas a:hover { color: var(--uabb-gadget-accent); border-color: var(--uabb-gadget-accent); background: rgba(23,57,108,.055); }
+body.uabb-department-objects .uabb-archive-categories a[aria-current="page"],
+body.uabb-department-objects .uabb-category-ideas a[aria-current="page"] { color: var(--uabb-gadget-accent); border-color: var(--uabb-gadget-accent); box-shadow: inset 0 -2px 0 var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-content-wrap > h1,
+body.uabb-department-objects .woocommerce-products-header__title,
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product .woocommerce-loop-product__title,
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product .price { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product img { background: var(--uabb-sand); }
+body.uabb-department-objects .uabb-nav-story-new-gadgets { color: var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-nav-story-new-gadgets::after { background: linear-gradient(90deg,transparent,rgba(23,57,108,.75),transparent); }
+body.uabb-department-objects :focus-visible { outline-color: var(--uabb-gadget-accent); }
+
+/* The homepage door keeps its blue distinction in the same shared palette. */
+.uabb-world-panel-objects { color: var(--uabb-ink); border-color: var(--uabb-line); background: var(--uabb-sand); }
+.uabb-world-panel-objects .uabb-eyebrow,
+.uabb-world-panel-objects .uabb-category-links a > span:first-child,
+.uabb-world-panel-objects .uabb-category-arrow { color: var(--uabb-navy); }
+.uabb-world-panel-objects .uabb-world-heading > p:last-child { color: var(--uabb-muted); }
+.uabb-world-panel-objects .uabb-category-links a { color: var(--uabb-ink); border-color: var(--uabb-line); }
+.uabb-world-panel-objects .uabb-category-links a:hover,
+.uabb-world-panel-objects .uabb-category-links a:focus-visible { color: var(--uabb-navy); border-color: rgba(23,57,108,.55); background: rgba(23,57,108,.055); }
+.uabb-department-card-objects .uabb-department-content { border-inline-start-color: rgba(23,57,108,.72); background: linear-gradient(90deg,rgba(12,35,49,.36),rgba(12,35,49,.06)); }
+.uabb-department-card-objects::after { background-image: linear-gradient(rgba(115,157,187,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(115,157,187,.12) 1px,transparent 1px); }
+
+/* Editorial proportions: soft corners, strong hierarchy, quiet movement. */
+.uabb-collection-switch { border-radius: 10px; box-shadow: 0 8px 28px rgba(38,39,31,.045); }
+.uabb-department-card, .uabb-category-card { border-radius: 8px; }
+.uabb-catalog-filters { border-radius: 12px; }
+.uabb-filter-submit, .uabb-filter-clear { min-height: 42px; }
+.uabb-nav { font-size: 10px; }
+.uabb-header-actions { font-size: 11px; }
+.uabb-eyebrow { font-size: 10px; }
+.uabb-collection-switch, .uabb-department-card, .uabb-category-card, .uabb-catalog-filters { transition-timing-function: cubic-bezier(.2,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) {
+	.uabb-collection-switch, .uabb-department-card, .uabb-category-card, .uabb-catalog-filters { transition: none !important; }
+}

@@ -1,0 +1,295 @@
+/* Almasar visual system: shared warm neutrals, one navy accent for Gadgets. */
+:root {
+	--uabb-navy: #17396c;
+	--uabb-gadget-accent: #17396c;
+	--uabb-gadget-accent-hover: #102d4f;
+	--uabb-display: "Bodoni Moda", "Times New Roman", serif;
+}
+
+body:dir(rtl) {
+	--uabb-font: "Noto Sans Arabic", Arial, sans-serif;
+	--uabb-display: "Amiri", "Noto Sans Arabic", serif;
+}
+
+body:not(:dir(rtl)) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong) {
+	font-family: var(--uabb-display);
+	font-weight: 500;
+}
+
+body:dir(rtl) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong) {
+	font-family: var(--uabb-display);
+	font-weight: 400;
+	letter-spacing: 0;
+}
+
+body:dir(rtl) .uabb-collection-switch strong { font-family: var(--uabb-display); font-weight: 700; }
+
+/* Keep the same paper, sand, ink, and footer in both storefronts. */
+body.uabb-department-objects {
+	--uabb-gadget-accent: #17396c;
+	--uabb-gadget-accent-hover: #102d4f;
+	--uabb-olive: var(--uabb-gadget-accent);
+	--uabb-olive-dark: var(--uabb-gadget-accent-hover);
+	--uabb-ink: #26271f;
+	--uabb-muted: #64665d;
+	--uabb-paper: #fbf9f4;
+	--uabb-sand: #f0ebe1;
+	--uabb-line: #ded8cc;
+	background: var(--uabb-paper);
+	color: var(--uabb-ink);
+}
+
+body.uabb-department-objects .uabb-announcement { color: #fffdf7; background: var(--uabb-olive-dark); }
+body.uabb-department-objects .uabb-header,
+body.uabb-department-objects .uabb-header-main,
+body.uabb-department-objects .uabb-nav { color: var(--uabb-ink); background: var(--uabb-paper); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-search { border-color: #aaa99f; }
+body.uabb-department-objects .uabb-search:focus-within { border-color: var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-search input[type="search"],
+body.uabb-department-objects .uabb-search button,
+body.uabb-department-objects .uabb-cart { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-cart b { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabs-language-switcher a[aria-current="page"] { color: var(--uabb-gadget-accent); }
+body.uabb-department-objects a:hover,
+body.uabb-department-objects .uabb-nav-mega > summary:hover,
+body.uabb-department-objects .uabb-header-actions a:hover,
+body.uabb-department-objects .uabb-mega-side > a:hover { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-mega-panel { color: var(--uabb-ink); background: rgba(249,247,242,.98); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-mega-side > a { border-color: rgba(38,39,31,.1); }
+body.uabb-department-objects .uabb-mega-tiles > .uabb-mega-note-blue { color: #233a4b; background: linear-gradient(145deg,#e2e9ec,#cbd8df); }
+
+body.uabb-department-objects .uabb-collection-switch {
+	color: var(--uabb-ink);
+	border-color: var(--uabb-line);
+	border-radius: 10px;
+	background: color-mix(in srgb,var(--uabb-paper) 92%,transparent);
+}
+body.uabb-department-objects .uabb-collection-switch > a + .uabb-collection-switch-mark + a,
+body.uabb-department-objects .uabb-collection-switch-mark { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-collection-switch > a { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-collection-switch > a small,
+body.uabb-department-objects .uabb-collection-switch > a > span { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-collection-switch > a:hover,
+body.uabb-department-objects .uabb-collection-switch > a.is-active {
+	color: var(--uabb-ink);
+	background: rgba(23,57,108,.065);
+	border-color: rgba(23,57,108,.28);
+}
+body.uabb-department-objects .uabb-collection-switch > a.is-active > span,
+body.uabb-department-objects .uabb-collection-switch > a.is-active small { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-archive-hero,
+body.uabb-department-objects .uabb-archive-hero-objects { color: var(--uabb-ink); background: var(--uabb-sand); border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-archive-hero-copy h1,
+body.uabb-department-objects .uabb-archive-hero-copy > p:last-child { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-archive-hero .uabb-eyebrow { color: var(--uabb-gadget-accent); }
+
+body.uabb-department-objects .uabb-catalog-filters {
+	color: var(--uabb-ink);
+	border-color: rgba(23,57,108,.16);
+	border-radius: 12px;
+	background: linear-gradient(145deg,rgba(255,255,255,.92),rgba(247,244,237,.96));
+	box-shadow: var(--uabb-shadow-panel);
+}
+body.uabb-department-objects .uabb-filter-field label,
+body.uabb-department-objects .woocommerce-result-count { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-filter-field select,
+body.uabb-department-objects .uabb-filter-field input,
+body.uabb-department-objects .woocommerce-ordering select {
+	color: var(--uabb-ink);
+	border-color: rgba(38,39,31,.2);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.84);
+}
+body.uabb-department-objects .uabb-filter-field select:focus-visible,
+body.uabb-department-objects .uabb-filter-field input:focus-visible,
+body.uabb-department-objects .woocommerce-ordering select:focus-visible { outline: 2px solid var(--uabb-gadget-accent); outline-offset: 2px; }
+body.uabb-department-objects .uabb-filter-field option { color: var(--uabb-ink); background: var(--uabb-paper); }
+body.uabb-department-objects .uabb-filter-submit,
+body.uabb-department-objects .woocommerce a.button.alt,
+body.uabb-department-objects .woocommerce button.button.alt {
+	color: #fff;
+	background: var(--uabb-gadget-accent);
+	border-color: var(--uabb-gadget-accent);
+	border-radius: 5px;
+}
+body.uabb-department-objects .uabb-filter-submit:hover,
+body.uabb-department-objects .woocommerce a.button.alt:hover,
+body.uabb-department-objects .woocommerce button.button.alt:hover { color: #fff; background: var(--uabb-gadget-accent-hover); border-color: var(--uabb-gadget-accent-hover); }
+body.uabb-department-objects .uabb-filter-clear { color: var(--uabb-muted); }
+body.uabb-department-objects .uabb-archive-categories { border-color: var(--uabb-line); }
+body.uabb-department-objects .uabb-archive-categories a,
+body.uabb-department-objects .uabb-category-ideas a { color: var(--uabb-ink); border-color: var(--uabb-line); background: rgba(255,255,255,.55); }
+body.uabb-department-objects .uabb-archive-categories a:hover,
+body.uabb-department-objects .uabb-category-ideas a:hover { color: var(--uabb-gadget-accent); border-color: var(--uabb-gadget-accent); background: rgba(23,57,108,.055); }
+body.uabb-department-objects .uabb-archive-categories a[aria-current="page"],
+body.uabb-department-objects .uabb-category-ideas a[aria-current="page"] { color: var(--uabb-gadget-accent); border-color: var(--uabb-gadget-accent); box-shadow: inset 0 -2px 0 var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-content-wrap > h1,
+body.uabb-department-objects .woocommerce-products-header__title,
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product .woocommerce-loop-product__title,
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product .price { color: var(--uabb-ink); }
+body.uabb-department-objects .uabb-content-wrap .woocommerce ul.products li.product img { background: var(--uabb-sand); }
+body.uabb-department-objects .uabb-nav-story-new-gadgets { color: var(--uabb-gadget-accent); }
+body.uabb-department-objects .uabb-nav-story-new-gadgets::after { background: linear-gradient(90deg,transparent,rgba(23,57,108,.75),transparent); }
+body.uabb-department-objects :focus-visible { outline-color: var(--uabb-gadget-accent); }
+
+/* The homepage door keeps its blue distinction in the same shared palette. */
+.uabb-world-panel-objects { color: var(--uabb-ink); border-color: var(--uabb-line); background: var(--uabb-sand); }
+.uabb-world-panel-objects .uabb-eyebrow,
+.uabb-world-panel-objects .uabb-category-links a > span:first-child,
+.uabb-world-panel-objects .uabb-category-arrow { color: var(--uabb-navy); }
+.uabb-world-panel-objects .uabb-world-heading > p:last-child { color: var(--uabb-muted); }
+.uabb-world-panel-objects .uabb-category-links a { color: var(--uabb-ink); border-color: var(--uabb-line); }
+.uabb-world-panel-objects .uabb-category-links a:hover,
+.uabb-world-panel-objects .uabb-category-links a:focus-visible { color: var(--uabb-navy); border-color: rgba(23,57,108,.55); background: rgba(23,57,108,.055); }
+.uabb-department-card-objects .uabb-department-content { border-inline-start-color: rgba(23,57,108,.72); background: linear-gradient(90deg,rgba(12,35,49,.36),rgba(12,35,49,.06)); }
+.uabb-department-card-objects::after { background-image: linear-gradient(rgba(115,157,187,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(115,157,187,.12) 1px,transparent 1px); }
+
+/* Editorial proportions: soft corners, strong hierarchy, quiet movement. */
+.uabb-collection-switch { border-radius: 10px; box-shadow: 0 8px 28px rgba(38,39,31,.045); }
+.uabb-department-card, .uabb-category-card { border-radius: 8px; }
+.uabb-catalog-filters { border-radius: 12px; }
+.uabb-filter-submit, .uabb-filter-clear { min-height: 42px; }
+.uabb-nav { font-size: 10px; }
+.uabb-header-actions { font-size: 11px; }
+.uabb-eyebrow { font-size: 10px; }
+.uabb-collection-switch, .uabb-department-card, .uabb-category-card, .uabb-catalog-filters { transition-timing-function: cubic-bezier(.2,.7,.2,1); }
+@media (prefers-reduced-motion: reduce) {
+	.uabb-collection-switch, .uabb-department-card, .uabb-category-card, .uabb-catalog-filters { transition: none !important; }
+}
+
+/* One type system across both collections: editorial headings, restrained UI text. */
+body:not(:dir(rtl)) {
+	--uabb-font: "Raleway", Arial, sans-serif;
+	--uabb-display: "Bodoni Moda", "Times New Roman", serif;
+}
+body:dir(rtl) {
+	--uabb-font: "Noto Sans Arabic", Arial, sans-serif;
+	--uabb-display: "Amiri", "Noto Sans Arabic", serif;
+}
+body,
+body :is(button, input, select, textarea) { font-family: var(--uabb-font); }
+body:not(:dir(rtl)) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong, .uabb-world-heading h2, .uabb-featured-department-heading h3, .uabb-content-wrap > h1, .woocommerce-products-header__title, .uabb-mega-side > a) {
+	font-family: var(--uabb-display);
+	font-weight: 400;
+	letter-spacing: normal;
+}
+body:dir(rtl) :is(h1, h2, h3, .uabb-brand-primary, .uabb-department-content strong, .uabb-archive-hero-copy h1, .uabb-entry-note h2, .uabb-mega-note > strong, .uabb-world-heading h2, .uabb-featured-department-heading h3, .uabb-content-wrap > h1, .woocommerce-products-header__title, .uabb-mega-side > a) {
+	font-family: var(--uabb-display);
+	font-weight: 400;
+	letter-spacing: 0;
+}
+body.uabb-department-objects .uabb-content-wrap > h1,
+body.uabb-department-objects .woocommerce-products-header__title,
+body.uabb-department-objects .uabb-archive-hero-copy h1 { font-family: var(--uabb-display); }
+
+/* Shared bilingual type scale: same hierarchy on Bags and Gadgets. */
+:root {
+	--uabb-body-size: 1rem;
+	--uabb-h1-size: clamp(2.25rem, 4.1vw, 3.875rem);
+	--uabb-h2-size: clamp(1.875rem, 3.3vw, 3rem);
+	--uabb-h3-size: clamp(1.625rem, 2.7vw, 2.5rem);
+	--uabb-h4-size: 2rem;
+	--uabb-h5-size: 1.625rem;
+	--uabb-h6-size: 1.25rem;
+	--uabb-ease-out: cubic-bezier(.16,1,.3,1);
+	--uabb-ease-snap: cubic-bezier(.2,.7,.2,1);
+}
+body { font-size: var(--uabb-body-size); line-height: 1.5; }
+body :is(.uabb-hero h1, .uabb-entry-intro h1, .uabb-archive-hero-copy h1, .uabb-content-wrap > h1, .uabb-article h1, .woocommerce-products-header__title) {
+	font-size: var(--uabb-h1-size) !important;
+	font-weight: 400;
+	line-height: 1.12;
+	letter-spacing: 0;
+}
+body :is(.uabb-section-heading h2, .uabb-world-heading h2) {
+	font-size: var(--uabb-h2-size) !important;
+	font-weight: 400;
+	line-height: 1.2;
+	letter-spacing: 0;
+}
+body :is(.uabb-featured-department-heading h3, .uabb-empty-collection h3) {
+	font-size: var(--uabb-h3-size) !important;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0;
+}
+body :is(h4) { font-size: var(--uabb-h4-size); line-height: 1.3; }
+body :is(h5) { font-size: var(--uabb-h5-size); line-height: 1.35; }
+body :is(h6) { font-size: var(--uabb-h6-size); line-height: 1.4; }
+body:dir(rtl) { line-height: 1.55; }
+body:dir(rtl) :is(.uabb-hero h1, .uabb-entry-intro h1, .uabb-archive-hero-copy h1, .uabb-content-wrap > h1, .uabb-article h1, .woocommerce-products-header__title, .uabb-section-heading h2, .uabb-world-heading h2, .uabb-featured-department-heading h3, .uabb-empty-collection h3) {
+	line-height: 1.35;
+	letter-spacing: 0;
+}
+
+/* Keep navigation, filters, product labels and form controls readable and aligned. */
+.uabb-nav { font-size: 13px; letter-spacing: .12em; }
+.uabb-header-actions, .uabs-language-switcher { font-size: 12px; }
+.uabb-search input[type="search"], .uabb-search button { font-size: 14px; }
+.uabb-filter-field label { font-size: 12px; letter-spacing: .08em; }
+.uabb-filter-field select, .uabb-filter-field input, .woocommerce-ordering select,
+.uabb-filter-submit, .uabb-filter-clear, .woocommerce-result-count,
+.woocommerce form .form-row label, .woocommerce form .form-row input,
+.woocommerce form .form-row select, .woocommerce form .form-row textarea { font-size: 14px !important; }
+.uabb-filter-field select, .uabb-filter-field input, .woocommerce-ordering select,
+.uabb-filter-submit, .woocommerce form .form-row input, .woocommerce form .form-row select { min-height: 44px; }
+.woocommerce ul.products li.product .woocommerce-loop-product__title { font-size: 16px !important; line-height: 1.45; letter-spacing: 0; }
+.woocommerce ul.products li.product .price { font-size: 16px !important; }
+.uabb-category-links a, .uabb-archive-categories a { font-size: 12px; letter-spacing: .04em; }
+body:dir(rtl) :is(.uabb-nav, .uabb-header-actions, .uabs-language-switcher, .uabb-search input[type="search"], .uabb-search button, .uabb-filter-field label, .uabb-filter-field select, .uabb-filter-field input, .uabb-filter-submit, .uabb-filter-clear, .uabb-category-links a, .uabb-archive-categories a) { letter-spacing: 0; }
+@media (max-width: 640px) {
+	:root { --uabb-h1-size: clamp(2rem, 8vw, 2.75rem); --uabb-h2-size: clamp(1.625rem, 6vw, 2.125rem); --uabb-h3-size: clamp(1.375rem, 5vw, 1.75rem); }
+	.woocommerce ul.products li.product .woocommerce-loop-product__title,
+	.woocommerce ul.products li.product .price { font-size: 14px !important; }
+	.uabb-header-actions { font-size: 11px; }
+}
+/* Labeled, non-purchasable preview cards for the empty primary catalogs. */
+.uabb-demo-products { margin: 28px 0 52px; }
+.uabb-demo-products-note { margin: 0 0 16px; color: var(--uabb-ink); font-size: 14px; line-height: 1.5; }
+.uabb-demo-products-grid { display: grid !important; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px !important; margin: 0 !important; padding: 0 !important; list-style: none !important; }
+.uabb-demo-product { float: none !important; width: 100% !important; margin: 0 !important; }
+.uabb-demo-product-image { position: relative; overflow: hidden; aspect-ratio: 4 / 3; background: #ece8df; }
+.uabb-demo-product-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.uabb-demo-product-badge { position: absolute; inset-block-start: 12px; inset-inline-start: 12px; max-width: calc(100% - 24px); padding: 8px 11px; border: 1px solid rgba(27,34,39,.2); border-radius: 999px; background: rgba(250,249,246,.94); color: #1b2227; font: 600 11px/1.25 var(--uabb-font, sans-serif); letter-spacing: .06em; }
+.uabb-demo-product-copy { padding: 14px 2px 0; }
+.uabb-demo-product-brand { margin: 0 0 6px; color: #555; font-size: 12px; font-weight: 600; letter-spacing: .14em; }
+.uabb-demo-product-copy h2 { margin: 0 0 8px; color: var(--uabb-ink); font-size: clamp(1.1rem,1.5vw,1.35rem); line-height: 1.35; }
+.uabb-demo-product-copy > p:last-child { max-width: 38rem; margin: 0; color: #424242; font-size: 14px; line-height: 1.6; }
+.uabb-preview-add { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 18px; padding: 0 20px; border: 1px solid var(--uabb-ink); border-radius: 2px; background: var(--uabb-ink); color: #fff; font: inherit; font-size: 13px; cursor: pointer; transition: background .2s ease, color .2s ease, transform .2s ease; }
+.uabb-preview-add:hover { background: transparent; color: var(--uabb-ink); transform: translateY(-1px); }
+.uabb-preview-add:focus-visible,.uabb-preview-cart button:focus-visible,.uabb-preview-cart a:focus-visible { outline: 2px solid #536b7c; outline-offset: 3px; }
+.uabb-preview-bag-status { position: fixed; inset-inline-end: 18px; inset-block-end: 18px; z-index: 1000; max-width: min(380px,calc(100vw - 36px)); margin: 0; padding: 13px 18px; border: 1px solid rgba(255,255,255,.24); border-radius: 3px; background: var(--uabb-ink,#1c252c); color: #fff; box-shadow: 0 14px 36px rgba(0,0,0,.2); opacity: 0; transform: translateY(8px); pointer-events: none; transition: opacity .2s ease, transform .2s ease; }
+.uabb-preview-bag-status:not(:empty) { opacity: 1; transform: translateY(0); }
+.uabb-preview-cart { max-width: 1240px; margin: 0 auto; padding-block: clamp(32px,6vw,72px); }
+.uabb-preview-cart-heading { max-width: 760px; margin-bottom: clamp(28px,5vw,52px); }
+.uabb-preview-cart-heading h1 { margin: 8px 0 12px; }
+.uabb-preview-cart-heading > p:last-child { max-width: 620px; color: #4a4a4a; line-height: 1.65; }
+.uabb-preview-cart-layout { display: grid; grid-template-columns: minmax(0,1fr) minmax(250px,320px); gap: clamp(24px,5vw,64px); align-items: start; }
+.uabb-preview-cart-list { display: grid; gap: 20px; margin: 0; padding: 0; list-style: none; }
+.uabb-preview-cart-row { display: grid; grid-template-columns: minmax(130px,230px) minmax(0,1fr); gap: 22px; padding-block: 20px; border-top: 1px solid var(--uabb-line,#d6d2ca); }
+.uabb-preview-cart-row > img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #ece8df; }
+.uabb-preview-cart-product h2 { margin: 5px 0 8px; font-size: clamp(18px,2vw,23px); line-height: 1.3; }
+.uabb-preview-cart-product > p:not(.uabb-demo-product-brand) { margin: 5px 0; color: #4a4a4a; font-size: 13px; line-height: 1.5; }
+.uabb-preview-cart-price { font-weight: 600; }
+.uabb-preview-quantity { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 16px; }
+.uabb-preview-quantity button { min-width: 40px; min-height: 40px; border: 1px solid var(--uabb-line,#d6d2ca); border-radius: 2px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.uabb-preview-quantity output { min-width: 26px; text-align: center; }
+.uabb-preview-quantity .uabb-preview-remove { margin-inline-start: 8px; padding-inline: 12px; font-size: 12px; }
+.uabb-preview-cart-summary { position: sticky; top: 24px; padding: 22px; border: 1px solid var(--uabb-line,#d6d2ca); background: rgba(255,255,255,.56); }
+.uabb-preview-cart-summary h2 { margin: 0 0 14px; font-size: 18px; }
+.uabb-preview-cart-count { min-height: 22px; color: #454545; font-size: 13px; }
+.uabb-preview-payment-note { margin: 16px 0; padding-top: 14px; border-top: 1px solid var(--uabb-line,#d6d2ca); color: #414141; font-size: 13px; line-height: 1.55; }
+.uabb-preview-checkout,.uabb-preview-clear { width: 100%; min-height: 46px; margin-top: 8px; font: inherit; }
+.uabb-preview-checkout { border: 1px solid #777; background: #777; color: #fff; cursor: not-allowed; }
+.uabb-preview-clear { border: 1px solid var(--uabb-line,#d6d2ca); background: transparent; color: inherit; cursor: pointer; }
+.uabb-preview-cart-empty { margin: 0 0 20px; padding: 22px; border: 1px solid var(--uabb-line,#d6d2ca); color: #353535; }
+.uabb-preview-cart-browse { display: flex; flex-wrap: wrap; gap: 12px; }
+.uabb-preview-cart-browse a { display: inline-flex; min-height: 44px; align-items: center; padding: 0 16px; border: 1px solid var(--uabb-line,#d6d2ca); color: inherit; text-decoration: none; }
+body:dir(rtl) .uabb-preview-add { letter-spacing: 0; }
+@media (max-width: 760px) { .uabb-preview-cart-layout { grid-template-columns: minmax(0,1fr); } .uabb-preview-cart-summary { position: static; } .uabb-preview-cart-row { grid-template-columns: minmax(110px,36%) minmax(0,1fr); gap: 14px; } }
+@media (prefers-reduced-motion: reduce) { .uabb-preview-add,.uabb-preview-bag-status { transition: none; } }
+body.rtl .uabb-demo-product-badge, body[dir="rtl"] .uabb-demo-product-badge { letter-spacing: 0; }
+@media (max-width: 700px) { .uabb-demo-products { margin-block: 20px 36px; } .uabb-demo-products-grid { grid-template-columns: minmax(0,1fr); gap: 18px !important; } .uabb-demo-product-copy > p:last-child { font-size: 14px; } }
+@media (prefers-reduced-motion: reduce) { .uabb-demo-product-image img { transition: none !important; } }

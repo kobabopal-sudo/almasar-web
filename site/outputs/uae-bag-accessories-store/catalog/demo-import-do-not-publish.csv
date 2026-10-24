@@ -1,0 +1,5 @@
+Type,SKU,Name,Published,Visibility in catalog,Short description,Description,Regular price,Categories,Images,In stock?,Stock,Parent,Attribute 1 name,Attribute 1 value(s),Attribute 1 visible,Attribute 1 global,meta:uabs_ar_title,meta:uabs_ar_short_description,meta:uabs_ar_description,meta:uabs_ar_variation_map,meta:uabs_ar_variation_label
+simple,DEMO-BAG-001,DEMO ONLY - Sample Crossbody,0,visible,DEMO ONLY - replace with your copy,DEMO ONLY - replace with product description,99,,,1,5,,,,,"تجريبي فقط - حقيبة كتف",,,,
+variable,DEMO-ACCESSORY-001,DEMO ONLY - Sample Accessory,0,visible,DEMO ONLY - replace with your copy,DEMO ONLY - replace with product description,,,,1,,,,Color,"Black,Beige",1,0,"تجريبي فقط - إكسسوار",,,"{""labels"":{""Color"":""اللون""},""values"":{""color"":{""black"":""أسود"",""beige"":""بيج""}}}",
+variation,DEMO-ACCESSORY-001-BLK,DEMO ONLY - Black,0,visible,,,99,,,,3,DEMO-ACCESSORY-001,Color,Black,0,0,,,,,أسود
+variation,DEMO-ACCESSORY-001-BGE,DEMO ONLY - Beige,0,visible,,,99,,,,2,DEMO-ACCESSORY-001,Color,Beige,0,0,,,,,بيج
